@@ -23,6 +23,7 @@ Log/
 secrets.json
 credentials.json
 Data/Config.xlsx
+Data/Output/
 
 # ⚙️ Fichiers système / Windows
 Thumbs.db
