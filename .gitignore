@@ -23,7 +23,7 @@ Log/
 secrets.json
 credentials.json
 Data/Config.xlsx
-Data/Output/
+Data/Output
 Data/Temp/
 
 # Fichiers système / Windows
