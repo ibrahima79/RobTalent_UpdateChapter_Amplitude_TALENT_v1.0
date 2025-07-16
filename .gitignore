@@ -16,11 +16,13 @@
 
 # 📁 Fichiers de logs ou debug
 Logs/
+Log/
 *.log
 
 # 🔒 Secrets ou fichiers sensibles (si tu en ajoutes un jour)
 secrets.json
 credentials.json
+Data/Config.xlsx
 
 # ⚙️ Fichiers système / Windows
 Thumbs.db
