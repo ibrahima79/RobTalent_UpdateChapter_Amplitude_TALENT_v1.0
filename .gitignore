@@ -1,30 +1,30 @@
-# 🧹 Fichiers temporaires générés par UiPath
+# Fichiers temporaires générés par UiPath
 .project.lock.json
 *.screenshots
 
-# 🔧 Paramètres utilisateur (ne doivent pas être partagés)
+# Paramètres utilisateur (ne doivent pas être partagés)
 *.local
 *.user
 .settings/
 .project/
 
-# 📁 Dossiers internes UiPath à ne pas versionner
+# Dossiers internes UiPath à ne pas versionner
 .entities/
 .objects/
 .templates/
 .tmh/
 
-# 📁 Fichiers de logs ou debug
+# Fichiers de logs ou debug
 Logs/
 Log/
 *.log
 
-# 🔒 Secrets ou fichiers sensibles (si tu en ajoutes un jour)
+# Secrets ou fichiers sensibles (si tu en ajoutes un jour)
 secrets.json
 credentials.json
 Data/Config.xlsx
 Data/Output/
 
-# ⚙️ Fichiers système / Windows
+# Fichiers système / Windows
 Thumbs.db
 Desktop.ini
