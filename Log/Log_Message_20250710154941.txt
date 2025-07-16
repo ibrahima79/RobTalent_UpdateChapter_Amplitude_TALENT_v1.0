@@ -1,0 +1,6 @@
+﻿•10-07-2025 15:49:41: ===> START PROCESS ...
+•10-07-2025 15:49:56: ===> ExFileExist + Au moins 1 ticket avec 'A traiter' AND 'stateAmplitude = false'.
+•10-07-2025 15:49:57: ===> Opening Amplitude ...
+•10-07-2025 15:50:23: ===> Controle & Execution / Client / tikcet1 / 20310000033 / GNING / TALLA
+•10-07-2025 15:50:24: ===> Controle & Execution / Client / ticket2 / 20310000033 / FAYE / Aboud
+•10-07-2025 15:50:26: ===> IN MOBILITE SWITCH / Client / FAYE / Aboud

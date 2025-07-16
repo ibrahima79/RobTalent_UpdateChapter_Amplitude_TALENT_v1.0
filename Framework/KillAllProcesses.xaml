@@ -1,0 +1,344 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="KillAllProcesses" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="396,342" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Use the Kill Process activity to force the termination of the Windows processes representing applications used in the business process being automated.&#xA;Note that killing processes might have undesirable outcomes, such as losing unsaved changes to files." DisplayName="Kill All Processes" sap:VirtualizedContainerService.HintSize="1054.4,2837.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NCheckState DisplayName="Check App State 'Utilisateur Amplitude'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1054.4,1190.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="0.5" Version="V3">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,940" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Amplitude - IBATEST - Utilisateurs Amplitude" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="449.6,878.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,562.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'OK Entrée'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Timeout="0.3" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="1a6a0890-7314-41ca-b341-7cee68624307" ContentHash="lFw-zhMpbE64RYGwnXRr5g" CvElementArea="68, 96, 92, 28" CvTextArea="104, 105, 17, 11" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="68, 96, 93, 29" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK Entrée' role='push button' /&gt;" Guid="21c4ddc4-900a-488a-8f1f-be385d026ca9" InformativeScreenshot="81ec07a427f55210105449aa58b68719.png" Reference="ou05JXiUCke4W8lkHWXS9A/Vv6ixtbiAkeW1Umwruf1tw" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Information' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="1a6a0890-7314-41ca-b341-7cee68624307" CvTextArea="41, 11, 78, 15" CvTextArgument="Information" CvType="Text" DesignTimeRectangle="41, 11, 78, 15" ElementType="Text" Guid="b2c29668-6e05-4bf7-978f-908cd6bc1d76" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'abandon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="956cab0e-3283-4b69-8cc2-8ab41e6010e9" ContentHash="6LmBmNUXe02eGRwKBTXxIQ" CvTextArea="49, 54, 18, 18" CvTextArgument="X" CvType="Text" DesignTimeRectangle="46, 44, 17, 18" ElementType="Button" FullSelectorArgument="&lt;ctrl name='abandon' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='abandon' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='abandon' /&gt;" Guid="20a25351-0f55-4bb8-9956-a87e24c1293c" ImageBase64="" InformativeScreenshot="222fd8850d50dad8fd69e1cbf1ea9965.png" Reference="XnJ_7MnlOUeqZgxPV6QH4g/aQssbd7jMkaUkD2dLRk7Pg" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - IBATEST - Utilisateurs Amplitude - 07/07/17 [Creatio*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target CVScreenId="137eff21-d211-426f-ba26-79f900129042" CvTextArea="41, 11, 463, 17" CvTextArgument="Amplitude - * - Changement chapitre comptable cpt*" CvType="Text" DesignTimeRectangle="42, 12, 430, 17" ElementType="Text" Guid="0b165a03-e296-4a2d-b7f9-d2129be9f21b" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,261.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,201.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Shortcuts="[d(hk)][d(alt)]f[u(alt)][u(hk)]" Version="V3" />
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" ContentHash="77P6AdWeg0OHePcsf3kvAQ" FilePath="C:\Program Files\FourJs\gdc\bin\gdc.exe" IconBase64="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" InformativeScreenshot="94de3cb17d0d5bc6fd8324b5d2da2c74.png" Reference="ou05JXiUCke4W8lkHWXS9A/zemfFrqtrk-2xyc9hL4EOA" Selector="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - IBATEST - Utilisateurs Amplitude - 07/07/17' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable ContentHash="zb4KQI4cxk6AyzzNkDDsnA" DesignTimeRectangle="0, 0, 692, 475" Guid="4b2cfc87-83f3-4122-a5af-d239930b9c59" InformativeScreenshot="244caba318a4badbc003c28ec2371cd6.png" Reference="ou05JXiUCke4W8lkHWXS9A/KMGHGT5LgEifRCwDPukxlw" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - * - Changement chapitre comptable cpt - 07/07/*' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+    <uix:NCheckState DisplayName="Check App State 'Amplitude -'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1054.4,1300.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="0.1" Version="V3">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="552,1050.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Amplitude - [IBATEST] - 07/07/2017" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="518.4,988.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,672.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Close'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable ContentHash="Hu6lZO9qw0WP6PcoW1rVcQ" CvType="CloseButton" DesignTimeRectangle="1221, 1, 71, 44" DesignTimeScaleFactor="1.5" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="aa364895-c110-4221-ad56-15bddffcefef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAvCAYAAACrKzemAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGzSURBVGhD7dixasJQFMZxSwdfQdDRwU1wSauJad/Ed/A1XISIUEGyurk71cFn0C6CTyC46HTaIzVEm9zkUOs9xe/Cnwz3hpAfyR1uwfM8usdc1yXHcajRaFCtVqNKpUKlUimq1+sRj+VySc5TkwqPRbpbrMsYr16vU7lcTsfa7XZ0j63Xa5rNZjQcDqnb7Z6hVatVYJlaLBbU6XQitCAIgJVVv98/Yo3HY2DlicGAJWg6nR6xVqsVsLLabDbfWB/kPLeAZepwOERYzZYHLFNxLNfzgWUqjuW1gWUsjtX2X4BlKo7l+6/AMnWOhS/LmCqs0WhE7/N54lxavP7t676kuWunCotfPBgMcoNJ1/82db9hXoBbQ3EqN/gsCBtQnEosLg3EFhSnFou7hLEJxanG4k5Ak8nEKhR3ifWgDYs7QfE1af5W4csShD1LkFqsNBibYCr3rCwQW2DqsPJC2ABThSUFuDWYKiw+PZC+OK/n04qkuWuncs/SGrAEAUsQsAQBSxCwBAFLELAEAUsQsAQBSxCwBAFLELAEAUtQIlYYhvQf47Hdbv+s/X5/fAawcvQTq0ifMUEdPvBFANAAAAAASUVORK5CYII=" InformativeScreenshot="f71795d961fc877859bc151a99821060.png" Reference="09q0dYBLMk-3rXVuCIT1Zw/mpzMrps3tk-auXKTvr_ASA" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - [IBATEST] - 07/07/2017' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(F3)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,344" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Validation Enter'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="75b58b47-0e7e-446a-ac2c-99519539b30b" CvElementArea="77, 95, 94, 30" CvTextArea="98, 103, 48, 12" CvTextArgument="Validation" CvType="Button" DesignTimeRectangle="78, 96, 93, 29" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Validation Alt+V' role='push button' /&gt;" Guid="ad035322-887f-4d31-9f26-fc7df5234e2f" InformativeScreenshot="793b314fe6e52e867334dd55d12d5b37.png" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Confirmation' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="75b58b47-0e7e-446a-ac2c-99519539b30b" CvTextArea="41, 11, 87, 15" CvTextArgument="Confirmation" CvType="Text" DesignTimeRectangle="41, 11, 87, 15" ElementType="Text" Guid="b4ab590b-df25-4369-9c93-d76461f6b60b" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="629, 219, 1302, 776" FilePath="C:\Program Files\FourJs\gdc\bin\gdc.exe" IconBase64="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" InformativeScreenshot="cc8121d47346ed4f5441150e54beca91.png" Selector="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - [IBATEST] - 07/07/2017' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable ContentHash="O4qGC0iZj0Ka0QEMfGEmgg" DesignTimeRectangle="0, 0, 1298, 767" Guid="19cde605-e340-4054-9791-d5bf242602e2" InformativeScreenshot="48e6759a398fbe4232f77fb9bdf2c32d.png" Reference="ou05JXiUCke4W8lkHWXS9A/ioOGncFRM0yKtMRSZvOg5A" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - [*] - 07/07/2017' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;EXCEL&quot;" sap:VirtualizedContainerService.HintSize="1054.4,56.8" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:KillProcess>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;Amplitude&quot;" sap:VirtualizedContainerService.HintSize="1054.4,56.8" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="fgltty">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:KillProcess>
+    <ui:LogMessage DisplayName="Log message (Kill processes)" sap:VirtualizedContainerService.HintSize="1054.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Killing processes...&quot;]" />
+  </Sequence>
+</Activity>

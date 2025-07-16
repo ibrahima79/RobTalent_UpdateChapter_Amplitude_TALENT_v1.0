@@ -1,0 +1,18 @@
+﻿•10-07-2025 18:08:43: ===> START PROCESS ...
+•10-07-2025 18:08:59: ===> ExFileExist + Au moins 1 ticket avec 'A traiter' AND 'stateAmplitude = false'.
+•10-07-2025 18:09:01: ===> Opening Amplitude ...
+•10-07-2025 18:09:25: ===> Controle & Execution / Client / REC-1 / 20310000033 / GNING / TALLA
+•10-07-2025 18:09:27: ===> Controle & Execution / Client / REC-2 / 20310000033 / FAYE / Aboud
+•10-07-2025 18:09:28: ===> Controle & Execution / Client / REC-3 / 20310000033 / Dia / Lynn
+•10-07-2025 18:09:30: ===> Controle & Execution / Client / REC-4 / 20310000033 / Gae / Ibrahiùa
+•10-07-2025 18:09:31: ===> Controle & Execution / Client / REC-5 / 20310000033 / GUEYE / Oumou
+•10-07-2025 18:09:32: ===> IN MOBILITE SWITCH / Client / GUEYE / Oumou
+•10-07-2025 18:09:47: ===> RESULT / Ticket non validé : Le code produit saisi n'est pas rattache au nouveau chapitre / Traité / True / False / False
+•10-07-2025 18:09:49: ===> Controle & Execution / Client / REC-6 / 20310000033 / SOW / Cherif
+•10-07-2025 18:09:50: ===> IN MOBILITE SWITCH / Client / SOW / Cherif
+•10-07-2025 18:10:08: ===> RESULT / Ticket non validé : Le code produit doit etre modifie / Traité / True / False / False
+•10-07-2025 18:10:09: ===> Controle & Execution / Client / REC-8 / 20310000033 / Diqllo / Fatou
+•10-07-2025 18:10:11: ===> IN MOBILITE SWITCH / Client / Diqllo / Fatou
+•10-07-2025 18:10:24: ===> RESULT / Ticket non validé : Le code produit saisi n'est pas rattache au nouveau chapitre / Traité / True / False / False
+•10-07-2025 18:10:26: ===> Controle & Execution / Client / REC-9 / 20310000033 / Pouye / Amina
+•10-07-2025 18:10:27: ===> IN MOBILITE SWITCH / Client / Pouye / Amina
