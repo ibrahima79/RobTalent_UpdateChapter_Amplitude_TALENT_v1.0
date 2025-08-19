@@ -84,34 +84,41 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Use the Kill Process activity to force the termination of the Windows processes representing applications used in the business process being automated.&#xA;Note that killing processes might have undesirable outcomes, such as losing unsaved changes to files." DisplayName="Kill All Processes" sap:VirtualizedContainerService.HintSize="505.20000000000005,661" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Use the Kill Process activity to force the termination of the Windows processes representing applications used in the business process being automated.&#xA;Note that killing processes might have undesirable outcomes, such as losing unsaved changes to files." DisplayName="Kill All Processes" sap:VirtualizedContainerService.HintSize="1088,3310.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="userAmplitude">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NCheckState DisplayName="Check App State 'Utilisateur Amplitude'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="0.5" Version="V3">
+    <uix:NCheckState DisplayName="Check App State 'Utilisateur Amplitude'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1088,1456" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="0.5" Version="V3">
       <uix:NCheckState.IfExists>
-        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="518,942" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="516.8,1165.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Amplitude - IBATEST - Utilisateurs Amplitude" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,882" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Amplitude - IBATEST - Utilisateurs Amplitude" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1104" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,566" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,788" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'OK Entrée'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Timeout="0.3" Version="V5">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'OK Entrée'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Timeout="0.3" Version="V5">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable CVScreenId="1a6a0890-7314-41ca-b341-7cee68624307" ContentHash="lFw-zhMpbE64RYGwnXRr5g" CvElementArea="68, 96, 92, 28" CvTextArea="104, 105, 17, 11" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="68, 96, 93, 29" ElementType="Button" FullSelectorArgument="&lt;ctrl name='OK Entrée' role='push button' /&gt;" Guid="21c4ddc4-900a-488a-8f1f-be385d026ca9" InformativeScreenshot="81ec07a427f55210105449aa58b68719.png" Reference="ou05JXiUCke4W8lkHWXS9A/Vv6ixtbiAkeW1Umwruf1tw" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Information' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -132,12 +139,33 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'abandon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'abandon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V4">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable CVScreenId="956cab0e-3283-4b69-8cc2-8ab41e6010e9" ContentHash="6LmBmNUXe02eGRwKBTXxIQ" CvTextArea="49, 54, 18, 18" CvTextArgument="X" CvType="Text" DesignTimeRectangle="46, 44, 17, 18" ElementType="Button" FullSelectorArgument="&lt;ctrl name='abandon' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='abandon' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='abandon' /&gt;" Guid="20a25351-0f55-4bb8-9956-a87e24c1293c" ImageBase64="" InformativeScreenshot="222fd8850d50dad8fd69e1cbf1ea9965.png" Reference="XnJ_7MnlOUeqZgxPV6QH4g/aQssbd7jMkaUkD2dLRk7Pg" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - IBATEST - Utilisateurs Amplitude - 07/07/17 [Creatio*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable CVScreenId="956cab0e-3283-4b69-8cc2-8ab41e6010e9" ContentHash="6LmBmNUXe02eGRwKBTXxIQ" CvTextArea="49, 54, 18, 18" CvTextArgument="X" CvType="Text" DesignTimeRectangle="41, 33, 23, 24" ElementType="Button" FullSelectorArgument="&lt;ctrl name='abandon' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='abandon' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='abandon' /&gt;" Guid="20a25351-0f55-4bb8-9956-a87e24c1293c" ImageBase64="" InformativeScreenshot="ee5e8390d45b18730990cc32cf90d448.png" Reference="XnJ_7MnlOUeqZgxPV6QH4g/aQssbd7jMkaUkD2dLRk7Pg" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - IBATEST - Utilisateurs Amplitude - 07/07/17 [Creatio*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Double" ContinueOnError="True" DisplayName="Click 'abandon'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9c38a804-5594-435c-9bb6-2c297c36a073" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable CVScreenId="956cab0e-3283-4b69-8cc2-8ab41e6010e9" ContentHash="6LmBmNUXe02eGRwKBTXxIQ" CvTextArea="49, 54, 18, 18" CvTextArgument="X" CvType="Text" DesignTimeRectangle="46, 44, 17, 18" ElementType="Button" FullSelectorArgument="&lt;ctrl name='abandon' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='abandon' role='push button' automationid='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='abandon' /&gt;" Guid="20a25351-0f55-4bb8-9956-a87e24c1293c" ImageBase64="" InformativeScreenshot="029972712043b0dc378d4c640e246308.png" Reference="XnJ_7MnlOUeqZgxPV6QH4g/aQssbd7jMkaUkD2dLRk7Pg" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - IBATEST - Utilisateurs Amplitude - 07/07/17 [Creatio*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="137eff21-d211-426f-ba26-79f900129042" CvTextArea="41, 11, 463, 17" CvTextArgument="Amplitude - * - Changement chapitre comptable cpt*" CvType="Text" DesignTimeRectangle="42, 12, 430, 17" ElementType="Text" Guid="0b165a03-e296-4a2d-b7f9-d2129be9f21b" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                            <uix:Target CVScreenId="137eff21-d211-426f-ba26-79f900129042" CvTextArea="41, 11, 463, 17" CvTextArgument="Amplitude - * - **" CvType="Text" DesignTimeRectangle="42, 12, 430, 17" ElementType="Text" Guid="0b165a03-e296-4a2d-b7f9-d2129be9f21b" ImageBase64="" SearchSteps="CV" TargetType="ComputerVisionBased" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -159,7 +187,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,49.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,261.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
@@ -187,7 +215,7 @@
         </Sequence>
       </uix:NCheckState.IfExists>
       <uix:NCheckState.IfNotExists>
-        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,36 +224,36 @@
         </Sequence>
       </uix:NCheckState.IfNotExists>
       <uix:NCheckState.Target>
-        <uix:TargetAnchorable ContentHash="zb4KQI4cxk6AyzzNkDDsnA" DesignTimeRectangle="0, 0, 692, 475" Guid="4b2cfc87-83f3-4122-a5af-d239930b9c59" InformativeScreenshot="244caba318a4badbc003c28ec2371cd6.png" Reference="ou05JXiUCke4W8lkHWXS9A/KMGHGT5LgEifRCwDPukxlw" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - * - Changement chapitre comptable cpt - 07/07/*' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+        <uix:TargetAnchorable ContentHash="zb4KQI4cxk6AyzzNkDDsnA" DesignTimeRectangle="0, 0, 1296, 759" Guid="4b2cfc87-83f3-4122-a5af-d239930b9c59" ImageBase64="" InformativeScreenshot="ad76792f051c6e341af9a84891d7e6f5.png" Reference="ou05JXiUCke4W8lkHWXS9A/KMGHGT5LgEifRCwDPukxlw" ScopeSelectorArgument="[string.Format(&quot;&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Amplitude - {0} - * - 07/07/*' /&gt;&quot;, userAmplitude)]" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
       </uix:NCheckState.Target>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NCheckState>
-    <uix:NCheckState DisplayName="Check App State 'Amplitude -'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="0.1" Version="V3">
+    <uix:NCheckState DisplayName="Check App State 'Amplitude -'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1088,1340.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="0.1" Version="V3">
       <uix:NCheckState.IfExists>
-        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="552,1050.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="585.6,1050.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Amplitude - [IBATEST] - 07/07/2017" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="518.4,988.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Amplitude - [IBATEST] - 07/07/2017" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="552,988.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,672.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,672.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
@@ -253,7 +281,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="451.2,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(F3)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(F3)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -261,15 +289,15 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NKeyboardShortcuts>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,344" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,344" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,240.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Validation Enter'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V3">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Validation Enter'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7c834a07-41ad-45ae-894b-42d206c68ef4" Version="V3">
                           <uix:NClick.Target>
                             <uix:TargetAnchorable CVScreenId="75b58b47-0e7e-446a-ac2c-99519539b30b" CvElementArea="77, 95, 94, 30" CvTextArea="98, 103, 48, 12" CvTextArgument="Validation" CvType="Button" DesignTimeRectangle="78, 96, 93, 29" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Validation Alt+V' role='push button' /&gt;" Guid="ad035322-887f-4d31-9f26-fc7df5234e2f" InformativeScreenshot="793b314fe6e52e867334dd55d12d5b37.png" ScopeSelectorArgument="&lt;wnd app='gdc.exe' cls='Qt*QWindowIcon' title='Confirmation' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -305,7 +333,7 @@
         </Sequence>
       </uix:NCheckState.IfExists>
       <uix:NCheckState.IfNotExists>
-        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,92.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -318,12 +346,12 @@
       </uix:NCheckState.Target>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NCheckState>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;EXCEL&quot;" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;EXCEL&quot;" sap:VirtualizedContainerService.HintSize="1088,56.8" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="EXCEL">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -331,7 +359,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;Amplitude&quot;" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="fgltty">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;Amplitude&quot;" sap:VirtualizedContainerService.HintSize="1088,56.8" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="fgltty">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -339,7 +367,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;Amplitude&quot;" sap:VirtualizedContainerService.HintSize="450,167" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="msedge">
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process &quot;Amplitude&quot;" sap:VirtualizedContainerService.HintSize="1088,166.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="msedge">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -347,6 +375,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:LogMessage DisplayName="Log message (Kill processes)" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Killing processes...&quot;]" />
+    <ui:LogMessage DisplayName="Log message (Kill processes)" sap:VirtualizedContainerService.HintSize="1088,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Killing processes...&quot;]" />
   </Sequence>
 </Activity>

@@ -4,6 +4,7 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Credentials.Activities": "[3.0.0]",
     "UiPath.Excel.Activities": "[3.1.1]",
     "UiPath.MicrosoftOffice365.Activities": "3.2.10",
     "UiPath.System.Activities": "[25.4.4]",
